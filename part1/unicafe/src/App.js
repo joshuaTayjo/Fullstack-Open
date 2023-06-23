@@ -15,6 +15,12 @@ const App = () => {
   const handleBad = () => {
     setBad(bad + 1);
   }
+  const getAverage = () => {
+    return (good - bad) / (good + bad + neutral);
+  }
+  const getPositive = () => {
+    return good / (good + bad + neutral) * 100;
+  }
   return (
     <div>
       <h1>give feedback</h1>
@@ -25,6 +31,8 @@ const App = () => {
       <p>good {good}</p>
       <p>neutral {neutral}</p>
       <p>bad {bad}</p>
+      <p>average {getAverage() || 0}</p>
+      <p>positive {getPositive() || 0}%</p>
     </div>
   )
 }
