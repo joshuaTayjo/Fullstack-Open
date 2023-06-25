@@ -7,13 +7,27 @@ const Statistics = props => {
       <p>No feedback given</p>
     </div>)
   }
-  return (<div>   <
-    h1>statistics</h1>
-    <p>good {props.good}</p>
-    <p>neutral {props.neutral}</p>
-    <p>bad {props.bad}</p>
-    <p>average {props.average}</p>
-    <p>positive {props.positive}%</p>
+  return (<div>
+    <h1>statistics</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>good {props.good}</td>
+        </tr>
+        <tr>
+          <td>neutral {props.neutral}</td>
+        </tr>
+        <tr>
+          <td>bad {props.bad}</td>
+        </tr>
+        <tr>
+          <td>average {props.average}</td>
+        </tr>
+        <tr>
+          <td>positive {props.positive}%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>)
 }
 
